@@ -15,5 +15,5 @@ def under_string(inp):
             h = hashlib.sha1(user_input[i:j].encode('utf-8')).hexdigest()
             hash_set.add(h)
     return len(hash_set)
-inp_len = 'hello'
+inp_len = 'hello my friend'
 print(f'К-во подстрок в строке {inp_len}: {under_string(inp_len)}')
