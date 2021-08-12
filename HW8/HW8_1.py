@@ -7,12 +7,12 @@ import hashlib
 
 
 def under_string(inp):
-    user_input = str(inp).lower()
-    inp_len = len(user_input)
+    u_input = str(inp).lower()
+    inp_len = len(u_input)
     hash_set = set()
     for i in range(inp_len + 1):
         for j in range(i + 1, inp_len + 1):
-            h = hashlib.sha1(user_input[i:j].encode('utf-8')).hexdigest()
+            h = hashlib.sha1(u_input[i:j].encode('utf-8')).hexdigest()
             hash_set.add(h)
     return len(hash_set)
 inp_len = 'hello my friend'
